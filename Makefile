@@ -7,7 +7,8 @@ export CC=g++
 
 # Using -Ofast instead of -O3 might result in faster code, 
 # but is only supported by newer GCC versions
-CFLAGS = -pthread -O3 -Wall -fPIC -shared
+CFLAGS = -pthread -O3 -Wall -fPIC 
+#-shared
 #DEBUG_CFLAGS= -lm -pthread -O0 -Wall -g
 
 # flag for linker.
