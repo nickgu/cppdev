@@ -24,13 +24,15 @@ OBJECTS=
 
 TARGETS= 
 
+SCRIPTS=
+
 # common function for make.
 define notice_log
 	@echo -e "\033[40;32;1m --> $(1) <-- \033[0m"
 endef
 
 # fake object.
-.PHONY: all output clean
+.PHONY: all clean
 
 all: $(TARGETS) output
 	$(call notice_log, 'MAKE ALL!')
@@ -38,6 +40,7 @@ all: $(TARGETS) output
 output:
 	rm -rf output
 	mkdir output
+	#cp $(SCRIPTS) output/
 
 clean:
 	rm -rf $(OBJECTS) $(TARGETS) *~ .*.swp *.pyc 
